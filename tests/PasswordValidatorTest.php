@@ -13,4 +13,10 @@ class PasswordValidatorTest extends TestCase
 
         self::assertTrue($validator->validate('Contras_1'));
     }
+
+    function test_returns_false_when_given_password_has_less_than_9_characters(): void {
+        $validator = new PasswordValidator();
+
+        self::assertFalse($validator->validate('Contra_1'));
+    }
 }
