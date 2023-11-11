@@ -23,6 +23,10 @@ class PasswordValidator
             return false;
         }
 
+        if (!str_contains($password,'_')) {
+            return false;
+        }
+
         return true;
     }
 }
