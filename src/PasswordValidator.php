@@ -5,8 +5,8 @@ namespace PhpKataSetup;
 
 class PasswordValidator
 {
-    public function validate(): bool
+    public function validate(string $password): bool
     {
-        return true;
+        return false;
     }
 }
