@@ -29,4 +29,9 @@ class PasswordValidatorTest extends TestCase
     {
         self::assertFalse($this->validator->validate('contras_1'));
     }
+
+    function test_returns_false_when_given_password_without_lower_character(): void
+    {
+        self::assertFalse($this->validator->validate('CONTRAS_1'));
+    }
 }
