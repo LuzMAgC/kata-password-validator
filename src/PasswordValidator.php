@@ -10,6 +10,11 @@ class PasswordValidator
         if (mb_strlen($password) < 9) {
             return false;
         }
+
+        if (mb_strtolower($password) === $password) {
+            return false;
+        }
+
         return true;
     }
 }
