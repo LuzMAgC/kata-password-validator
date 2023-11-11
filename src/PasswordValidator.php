@@ -19,6 +19,10 @@ class PasswordValidator
             return false;
         }
 
+        if (preg_match('/[0-9]/', $password) !== 1) {
+            return false;
+        }
+
         return true;
     }
 }
