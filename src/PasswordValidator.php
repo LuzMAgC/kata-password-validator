@@ -15,6 +15,10 @@ class PasswordValidator
             return false;
         }
 
+        if (mb_strtoupper($password) === $password) {
+            return false;
+        }
+
         return true;
     }
 }
