@@ -7,6 +7,6 @@ class PasswordValidator
 {
     public function validate(string $password): bool
     {
-        return false;
+        return true;
     }
 }
