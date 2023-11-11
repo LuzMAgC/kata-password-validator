@@ -34,4 +34,9 @@ class PasswordValidatorTest extends TestCase
     {
         self::assertFalse($this->validator->validate('CONTRAS_1'));
     }
+
+    function test_returns_false_when_given_password_without_a_number(): void
+    {
+        self::assertFalse($this->validator->validate('Contras_u'));
+    }
 }
