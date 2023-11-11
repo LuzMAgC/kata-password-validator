@@ -19,4 +19,10 @@ class PasswordValidatorTest extends TestCase
 
         self::assertFalse($validator->validate('Contra_1'));
     }
+
+    function test_returns_false_when_given_password_without_upper_character(): void {
+        $validator = new PasswordValidator();
+
+        self::assertFalse($validator->validate('contras_1'));
+    }
 }
