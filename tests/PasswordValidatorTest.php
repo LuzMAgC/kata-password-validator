@@ -39,4 +39,9 @@ class PasswordValidatorTest extends TestCase
     {
         self::assertFalse($this->validator->validate('Contras_u'));
     }
+
+    function test_returns_false_when_given_password_without_an_underscore(): void
+    {
+        self::assertFalse($this->validator->validate('Contrase1'));
+    }
 }
